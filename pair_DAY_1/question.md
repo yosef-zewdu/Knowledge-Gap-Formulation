@@ -1,13 +1,11 @@
-# Partner Question — Day 1
+# My Question — Day 1
 
-**Asker:** Partner (via Yosef)
+**Asker:** Yosef
 
 **Gap question:**
 
-In my Week 11 submission, I report 19,712 ms average inference latency per task for my Qwen3.5-0.8B ORPO adapter on a Colab T4, and I recommend an A100/H100 upgrade to bring it down to 2–4 seconds. But I cannot defend why that hardware upgrade would actually close the gap.
+I trained a LoRA-adapted Qwen2.5-7B with DPO on a 1,024-token max sequence length. The rationale in my Week 11 methodology_rationale.md claims the deployed judge adds "near-zero marginal cost — one forward pass." How much compute does one forward pass through that model actually cost in wall-time and tokens/second during inference, and how does that cost split between the prefill phase (processing the full 1,024-token prompt) and the decode phase (generating the 1–3 token score label)?
 
-**My gap:** How does that 19.7 seconds split between the prefill phase (processing the input prompt in parallel) and the decode phase (generating output tokens one at a time) — and does that split tell me whether the bottleneck is compute-bound (fixed by more FLOPS) or memory-bandwidth-bound (fixed by higher HBM bandwidth)? Without knowing this, I don't know if the A100 recommendation targets the real problem or the wrong one entirely — and at 0.8B scale, the answer might be completely different from what I'd expect for a 7B or 70B model.
+**Grounded artifact:** Week 11 `methodology_rationale.md` — the cost argument section that claims "near-zero marginal cost."
 
-**Grounded artifact:** Week 11 report recommending A100/H100 upgrade.
-
-**Why this matters for FDE work:** Every time you size infrastructure for a fine-tuned model, you need to know which phase dominates and which hardware axis (FLOPS vs. bandwidth) to target. Getting this wrong wastes budget and fails the latency SLA.
+**Why this matters for FDE work:** Any time a system design includes an LLM-as-a-judge component, the engineer needs to be able to state its inference cost precisely — in absolute wall-time and as a fraction of total pipeline latency. A claim of "near-zero cost" that cannot be derived from first principles is a liability in a production cost model.
