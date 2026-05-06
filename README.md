@@ -7,7 +7,7 @@ TRP1 Week 12 — Daily paired gap research, public explainers, and portfolio dep
 | Day | Topic | Question | Explainer | Sign-off |
 |-----|-------|----------|-----------|---------|
 | 1 | LLM Inference Latency: Bandwidth vs. FLOPS | [question.md](pair_DAY_1/question.md) | [explainer.md](pair_DAY_1/explainer.md) | Closed |
-| 2 | — | — | — | — |
+| 2 | Agent Tool-Use Internals: Token-Level Function Calling | [question.md](pair_DAY_2/question.md) | [explainer.md](pair_DAY_2/explainer.md) | Closed |
 | 3 | — | — | — | — |
 | 4 | — | — | — | — |
 | 5 | — | — | — | — |
@@ -19,5 +19,6 @@ TRP1 Week 12 — Daily paired gap research, public explainers, and portfolio dep
 | Day | Title | URL |
 |-----|-------|-----|
 | 1 | Your LLM Is Slow Because of Bandwidth, Not FLOPS | — |
+| 2 | The Hidden Cost in Your Thinking Model: Reasoning Tokens Explained | — |
 
 
