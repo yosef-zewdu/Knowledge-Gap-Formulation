@@ -8,8 +8,8 @@ TRP1 Week 12 — Daily paired gap research, public explainers, and portfolio dep
 |-----|-------|----------|-----------|---------|
 | 1 | LLM Inference Latency: Bandwidth vs. FLOPS | [question.md](pair_DAY_1/question.md) | [explainer.md](pair_DAY_1/explainer.md) | Closed |
 | 2 | Agent Tool-Use Internals: Token-Level Function Calling | [question.md](pair_DAY_2/question.md) | [explainer.md](pair_DAY_2/explainer.md) | Closed |
-| 3 | — | — | — | — |
-| 4 | — | — | — | — |
+| 3 | DPO Loss vs. Score Collapse: What Beta Actually Constrains | [question.md](pair_DAY_3/question.md) | [explainer.md](pair_DAY_3/explainer.md) | Closed |
+| 4 | pass@k vs pass@1: Separating Stochastic Misses from Capability Gaps | [question.md](pair_DAY_4/question.md) | [explainer.md](pair_DAY_4/explainer.md) | Closed |
 | 5 | — | — | — | — |
 
 ## Public Artifacts
